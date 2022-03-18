@@ -315,8 +315,7 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
 
     // If the exp_id is wrong/not found, returns an error message.
     if (removeIndex === -1) {
-      res.json({ msg: "Not found." });
-      return;
+      return res.status(404).json({ msg: "Profile not found." });
     }
     profile.education.splice(removeIndex, 1);
     await profile.save();
