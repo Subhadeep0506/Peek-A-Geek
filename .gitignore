@@ -2,3 +2,4 @@ node_modules/
 config/default.json
 
 client/node_modules
+client/.directory
