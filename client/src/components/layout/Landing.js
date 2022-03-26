@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import icon from "../../img/icon.png";
+import icon from "../../img/icon01.webp";
 import "../../App.css";
+import "./landing.css";
+
 const Landing = () => {
   return (
     <section className="landing">

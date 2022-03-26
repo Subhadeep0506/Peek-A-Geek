@@ -8,7 +8,7 @@
   --primary-color: #3483eb;
   --dark-color: #2e3440;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
+  --danger-color: #ffaba1;
   --success-color: #28a745;
 }
 
@@ -155,11 +155,21 @@ img {
 }
 
 .alert {
-  padding: 0.8rem;
-  margin: 1rem 0;
+  text-align: start;
+  padding: 0.6rem 1rem;
+  margin-top: 5px;
+  border-radius: 4px;
   opacity: 0.9;
-  background: var(--light-color);
-  color: #333;
+  background: var(--danger-color);
+  border: #ff3d24 solid 1px;
+  color: var(--danger-color);
+}
+
+.alert-wrapper {
+  position: fixed;
+  top: 4rem;
+  right: 10rem;
+  display: inline-block;
 }
 
 .btn-primary,
@@ -191,7 +201,7 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
-  color: #fff;
+  color: #a31100;
 }
 
 .btn-success,
@@ -212,7 +222,7 @@ img {
 }
 
 .btn:hover {
-  opacity: 0.8;
+  box-shadow: 0 3px 10px 1px rgb(0 0 0 / 0.4);
 }
 
 .bg-light,
@@ -261,7 +271,8 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
+  border-radius: 6px;
 }
 
 .form input[type="submit"],
@@ -333,6 +344,7 @@ button {
 .navbar a:hover {
   color: var(--dark-color);
   transition: color 0.2s ease-in-out;
+  text-shadow: 1px 1px 10px #333;
 }
 
 .navbar .welcome span {
@@ -499,6 +511,10 @@ button {
 
 /* Mobile Styles */
 @media (max-width: 700px) {
+  .alert-wrapper {
+    right: 2rem;
+  }
+
   .container {
     margin-top: 8rem;
   }
