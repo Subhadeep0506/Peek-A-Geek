@@ -2,12 +2,13 @@ const express = require("express");
 const request = require("request");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
+const { profile_url } = require("gravatar");
 
 const config = require("config");
 const auth = require("../../middleware/auth");
 const User = require("../../models/User");
 const Profile = require("../../models/Profile");
-const { profile_url } = require("gravatar");
+const Post = require("../../models/Post");
 
 // @route         GET api/profile/me
 // @description   Get current user's profile
@@ -162,7 +163,8 @@ router.get("/user/:user_id", async (req, res) => {
 // @access        Private
 router.delete("/", auth, async (req, res) => {
   try {
-    // @TODO - Remove user post
+    // Remove user post
+    await Post.deleteMany({ user: req.user.id });
     // Finds the profile and removes it
     await Profile.findOneAndRemove({ user: req.user.id });
     // Finds the user and deletes it
@@ -260,7 +262,7 @@ router.put(
     [
       check("school", "Field 'school' is required.").not().isEmpty(),
       check("degree", "Field 'degree' is required.").not().isEmpty(),
-      check("fieldofstudy", "Field 'field_of_study' is required.")
+      check("fieldofstudy", "Field 'fieldofstudy' is required.")
         .not()
         .isEmpty(),
       check("from", "Field 'from' is required.").not().isEmpty(),

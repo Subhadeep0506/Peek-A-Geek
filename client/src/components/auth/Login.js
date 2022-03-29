@@ -43,7 +43,6 @@ const Login = ({ login, isAuthenticated }) => {
               name="email"
               value={email}
               onChange={(event) => onChange(event)}
-              required
             />
           </div>
           <div className="form-group">
@@ -51,10 +50,8 @@ const Login = ({ login, isAuthenticated }) => {
               type="password"
               placeholder="Password"
               name="password"
-              minLength="6"
               value={password}
               onChange={(event) => onChange(event)}
-              required
             />
           </div>
 

@@ -9,7 +9,7 @@
   --dark-color: #2e3440;
   --light-color: #f4f4f4;
   --danger-color: #ffaba1;
-  --success-color: #28a745;
+  --success-color: #93ff89;
 }
 
 * {
@@ -46,9 +46,11 @@ img {
   overflow: hidden;
   padding: 0 2rem;
   margin-top: 6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
-
+.small-text {
+  color: red;
+}
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
@@ -63,7 +65,7 @@ img {
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 
@@ -201,6 +203,7 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
+  border: #ff3d24 solid 1px;
   color: #a31100;
 }
 
@@ -209,16 +212,17 @@ img {
 .badge-success,
 .alert-success {
   background: var(--success-color);
-  color: #fff;
+  border: #11c900 solid 1px;
+  color: #0ea300;
 }
 
 .btn-white,
 .bg-white,
 .badge-white,
 .alert-white {
-  background: #fff;
-  color: #333;
-  border: #ccc solid 1px;
+  background: rgb(199, 199, 199);
+  color: rgb(29, 29, 29);
+  border: rgb(66, 66, 66) solid 1px;
 }
 
 .btn:hover {
@@ -242,7 +246,7 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -278,6 +282,20 @@ img {
 .form input[type="submit"],
 button {
   font: inherit;
+}
+
+.form input[type="checkbox"] {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+label {
+  width: max-content;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
 }
 
 .form .social-input {
@@ -331,6 +349,32 @@ button {
   opacity: 0.9;
 }
 
+.footer {
+  display: inline-flex;
+  color: #ffffff;
+  background: linear-gradient(to right, #48556355, #29323c55);
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+  bottom: 0;
+}
+
+.footer h1 {
+  color: var(--primary-color);
+}
+.footer-logo {
+  font-size: 3rem;
+  margin: 10px;
+}
+.navbar-user-name {
+  padding: 6px 9px;
+  border-radius: 6px;
+  border: 2px solid var(--primary-color);
+}
+
 .navbar ul {
   display: flex;
 }
@@ -342,19 +386,24 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--dark-color);
+  color: var(--light-color);
   transition: color 0.2s ease-in-out;
-  text-shadow: 1px 1px 10px #333;
+  text-shadow: 1px 1px 10px #fff;
 }
 
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
 
+.app-logo {
+  width: 120px;
+  height: 120px;
+}
+
 /* Landing Page */
 .landing {
   position: relative;
-  background: url("./img/background.jpg") no-repeat center center/cover;
+  background: url("./img/background-abs.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -365,9 +414,13 @@ button {
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  text-align: center;
+  text-align: end;
+}
+.dash-buttons {
+  margin-bottom: 3rem;
+  justify-content: center;
 }
 
 /* Profiles Page */
@@ -517,6 +570,7 @@ button {
 
   .container {
     margin-top: 8rem;
+    margin-bottom: 8rem;
   }
 
   .hide-sm {
@@ -525,7 +579,7 @@ button {
 
   /* Text Styles */
   .x-large {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .large {
@@ -538,6 +592,11 @@ button {
 
   /* Navbar */
   .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .footer {
     display: block;
     text-align: center;
   }
@@ -586,10 +645,15 @@ button {
     flex-direction: column;
   }
 
+  .dash-buttons {
+    margin-bottom: 3rem;
+    justify-content: center;
+  }
+
   .dash-buttons a {
     display: block;
     width: 100%;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
   }
 
   .post {
@@ -599,9 +663,9 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
-}
 
-.app-logo {
-  width: 120px;
-  height: 120px;
+  .app-logo {
+    width: 90px;
+    height: 90px;
+  }
 }

@@ -1,11 +1,12 @@
 .x-large {
+  padding-right: 8px;
   display: inline-block;
   justify-content: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 2px solid transparent; /* The typwriter cursor */
+  border-right: 6px solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   /* Gives that scrolling effect as the typing happens */
-  animation: typing 2s steps(50, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3s steps(100, end), blink-caret 1s step-end infinite;
 }
 
 /* The typing effect */
@@ -22,9 +23,9 @@
 @keyframes blink-caret {
   from,
   to {
-    border-color: transparent;
+    border-color: #fff;
   }
   50% {
-    border-color: transparent;
+    border-color: #fff;
   }
 }

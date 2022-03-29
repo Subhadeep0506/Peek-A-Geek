@@ -26,27 +26,6 @@ const Resgister = ({ setAlert, register, isAuthenticated }) => {
     if (password !== passwordverify) {
       setAlert("Passwords don't match.", "danger");
     } else {
-      // const newUser = {
-      //   name,
-      //   email,
-      //   password,
-      // };
-
-      // try {
-      //   const config = {
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //   };
-
-      //   const body = JSON.stringify(newUser);
-
-      //   const res = await axios.post("/api/users", body, config);
-
-      //   console.log(res.data);
-      // } catch (error) {
-      //   console.error(error.response.data);
-      // }
       register({ name, email, password });
     }
   };
