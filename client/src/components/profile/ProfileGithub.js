@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 
 import { getGithubRepos } from "../../actions/profile";
 import Spinner from "../layout/Spinner";
+import "./language-colors.css";
+import GithubLangs from "./GithubLangs";
 
 const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   useEffect(() => {
@@ -18,17 +20,22 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
       ) : (
         repos.map((repo) => (
           <div key={repo._id} className="repo bg-white p-1 my-1">
-            <div>
-              <h4>
-                <a
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {repo.name}
-                </a>
-              </h4>
-              <p>{repo.description}</p>
+            <div className="repo-body">
+              <div>
+                <h4>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {repo.name}
+                  </a>
+                </h4>
+                <p>{repo.description}</p>
+              </div>
+              <div>
+                <GithubLangs repo={repo} className="repo-lang-row" />
+              </div>
             </div>
             <div>
               <ul>
