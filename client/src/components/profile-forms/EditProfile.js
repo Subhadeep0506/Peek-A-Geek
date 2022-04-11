@@ -85,11 +85,11 @@ const EditProfile = ({
     <Fragment>
       <section className="container">
         <h1 className="large text-primary">
-          <i class="bi bi-person-lines-fill"></i> {!profile ? "Create" : "Edit"}{" "}
+          <i className="bi bi-person-lines-fill"/> {!profile ? "Create" : "Edit"}{" "}
           Your Profile
         </h1>
         <p className="lead">
-          <i className="bi bi-pencil-square"></i> Let's get some information to
+          <i className="bi bi-pencil-square"/> Let's get some information to
           make your profile stand out
         </p>
         <small className="small-text">* = required field</small>
@@ -181,7 +181,7 @@ const EditProfile = ({
               name="bio"
               value={bio}
               onChange={(event) => onChange(event)}
-            ></textarea>
+            />
             <small className="form-text">Tell us a little about yourself</small>
           </div>
 
@@ -199,7 +199,7 @@ const EditProfile = ({
           {displaySocialInputs && (
             <Fragment>
               <div className="form-group social-input">
-                <i className="fab fa-twitter fa-2x"></i>
+                <i className="fab fa-twitter fa-2x"/>
                 <input
                   type="text"
                   placeholder="Twitter URL"
@@ -210,7 +210,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-facebook fa-2x"></i>
+                <i className="fab fa-facebook fa-2x"/>
                 <input
                   type="text"
                   placeholder="Facebook URL"
@@ -221,7 +221,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-youtube fa-2x"></i>
+                <i className="fab fa-youtube fa-2x"/>
                 <input
                   type="text"
                   placeholder="YouTube URL"
@@ -232,7 +232,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-linkedin fa-2x"></i>
+                <i className="fab fa-linkedin fa-2x"/>
                 <input
                   type="text"
                   placeholder="Linkedin URL"
@@ -243,7 +243,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-instagram fa-2x"></i>
+                <i className="fab fa-instagram fa-2x"/>
                 <input
                   type="text"
                   placeholder="Instagram URL"

@@ -11,14 +11,14 @@ const Education = ({ education, deleteEducation }) => {
       <td>{edu.school}</td>
       <td className="hide-sm">{edu.degree}</td>
       <td>
-        {formatDate(edu.from)} - {edu.to ? formatDate(edu.to) : "Now"}
+        {formatDate(edu.from)} - {edu.to ? formatDate(edu.to) : "Present"}
       </td>
       <td>
         <button
           onClick={() => deleteEducation(edu._id)}
           className="btn btn-danger"
         >
-          <i class="bi bi-trash-fill"></i> Delete
+          <i className="bi bi-trash-fill"></i> Delete
         </button>
       </td>
     </tr>

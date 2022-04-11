@@ -11,14 +11,14 @@ const Experience = ({ experience, deleteExperience }) => {
       <td>{exp.company}</td>
       <td className="hide-sm">{exp.title}</td>
       <td>
-        {formatDate(exp.from)} - {exp.to ? formatDate(exp.to) : "Now"}
+        {formatDate(exp.from)} - {exp.to ? formatDate(exp.to) : "Present"}
       </td>
       <td>
         <button
           onClick={() => deleteExperience(exp._id)}
           className="btn btn-danger"
         >
-          <i class="bi bi-trash-fill"></i> Delete
+          <i className="bi bi-trash-fill"></i> Delete
         </button>
       </td>
     </tr>

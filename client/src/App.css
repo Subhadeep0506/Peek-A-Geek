@@ -220,9 +220,10 @@ img {
 .bg-white,
 .badge-white,
 .alert-white {
-  background: rgb(199, 199, 199);
+  background: rgb(221, 221, 221);
   color: rgb(29, 29, 29);
-  border: rgb(66, 66, 66) solid 1px;
+  border: rgb(151, 151, 151) dashed 2px;
+  border-radius: 8px;
 }
 
 .btn:hover {
@@ -231,7 +232,22 @@ img {
 
 .bg-light,
 .badge-light {
-  border: #ccc solid 1px;
+  border: #ccc dashed 3px;
+  border-radius: 8px;
+}
+
+.badge-fork {
+  border-radius: 4px;
+}
+.badge-stars {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 4px;
+}
+.badge-watcher {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 .round-img {
@@ -432,6 +448,7 @@ label {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 /* Profile Page */
@@ -452,6 +469,7 @@ label {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 8px;
 }
 
 .profile-top img {
