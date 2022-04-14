@@ -232,26 +232,24 @@ export const deleteEducation = (id) => async (dispatch) => {
 
 // Deleting an account and it's profile
 export const deleteAccount = () => async (dispatch) => {
-  if (window.confirm("Are you sure? Deleted account cannot be recovered!")) {
-    try {
-      await axios.delete("/api/profile");
+  try {
+    await axios.delete("/api/profile");
 
-      dispatch({
-        type: CLEAR_PROFILE,
-      });
-      dispatch({
-        type: ACCOUNT_DELETED,
-      });
+    dispatch({
+      type: CLEAR_PROFILE,
+    });
+    dispatch({
+      type: ACCOUNT_DELETED,
+    });
 
-      dispatch(setAlert("Your account has been permanently deleted!", "white"));
-    } catch (error) {
-      dispatch({
-        type: PROFILE_ERROR,
-        payload: {
-          msg: error.response.statusText,
-          status: error.response.status,
-        },
-      });
-    }
+    dispatch(setAlert("Your account has been permanently deleted!", "white"));
+  } catch (error) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: {
+        msg: error.response.statusText,
+        status: error.response.status,
+      },
+    });
   }
 };

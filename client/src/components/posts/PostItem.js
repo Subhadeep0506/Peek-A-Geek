@@ -54,7 +54,7 @@ const PostItem = ({
               <button
                 onClick={() =>
                   confirmAlert({
-                    title: "Delete?",
+                    title: "Delete Post?",
                     message: "Are you sure you want to delete this post?",
                     buttons: [
                       {

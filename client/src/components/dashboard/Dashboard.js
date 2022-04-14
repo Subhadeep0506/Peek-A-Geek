@@ -43,8 +43,8 @@ const Dashboard = ({
                 <button
                   onClick={() =>
                     confirmAlert({
-                      title: "Delete Comment?",
-                      message: "Are you sure you want to delete this comment?",
+                      title: "Delete Profile?",
+                      message: "Are you sure you want to delete your account?",
                       buttons: [
                         {
                           label: "Proceed",

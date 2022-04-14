@@ -19,8 +19,8 @@ const Experience = ({ experience, deleteExperience }) => {
         <button
           onClick={() =>
             confirmAlert({
-              title: "Delete Comment?",
-              message: "Are you sure you want to delete this comment?",
+              title: "Delete Experience Credential?",
+              message: "Are you sure you want to delete this credential?",
               buttons: [
                 {
                   label: "Proceed",
