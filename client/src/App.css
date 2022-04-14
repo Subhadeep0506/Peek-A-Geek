@@ -181,6 +181,7 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+  border-radius: 6px;
 }
 
 .btn-light,
@@ -189,6 +190,13 @@ img {
 .alert-light {
   background: var(--light-color);
   color: #333;
+}
+
+.bg-post {
+  background: #ffffff;
+  color: rgb(29, 29, 29);
+  border: rgb(151, 151, 151) dotted 2px;
+  border-radius: 8px;
 }
 
 .btn-dark,
@@ -292,6 +300,7 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
+  font-family: "Helvetica Neue";
   border: 1px solid #888;
   border-radius: 6px;
 }
@@ -593,7 +602,7 @@ label {
 
 .post .post-date {
   color: #aaa;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   margin-bottom: 0.5rem;
 }
 

@@ -85,11 +85,11 @@ const EditProfile = ({
     <Fragment>
       <section className="container">
         <h1 className="large text-primary">
-          <i className="bi bi-person-lines-fill"/> {!profile ? "Create" : "Edit"}{" "}
-          Your Profile
+          <i className="bi bi-person-lines-fill" />{" "}
+          {!profile ? "Create" : "Edit"} Your Profile
         </h1>
         <p className="lead">
-          <i className="bi bi-pencil-square"/> Let's get some information to
+          <i className="bi bi-pencil-square" /> Let's get some information to
           make your profile stand out
         </p>
         <small className="small-text">* = required field</small>
@@ -184,7 +184,6 @@ const EditProfile = ({
             />
             <small className="form-text">Tell us a little about yourself</small>
           </div>
-
           <div className="my-2">
             <button
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
@@ -195,11 +194,10 @@ const EditProfile = ({
             </button>
             <span>Optional</span>
           </div>
-
           {displaySocialInputs && (
             <Fragment>
               <div className="form-group social-input">
-                <i className="fab fa-twitter fa-2x"/>
+                <i className="fab fa-twitter fa-2x" />
                 <input
                   type="text"
                   placeholder="Twitter URL"
@@ -210,7 +208,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-facebook fa-2x"/>
+                <i className="fab fa-facebook fa-2x" />
                 <input
                   type="text"
                   placeholder="Facebook URL"
@@ -221,7 +219,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-youtube fa-2x"/>
+                <i className="fab fa-youtube fa-2x" />
                 <input
                   type="text"
                   placeholder="YouTube URL"
@@ -232,7 +230,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-linkedin fa-2x"/>
+                <i className="fab fa-linkedin fa-2x" />
                 <input
                   type="text"
                   placeholder="Linkedin URL"
@@ -243,7 +241,7 @@ const EditProfile = ({
               </div>
 
               <div className="form-group social-input">
-                <i className="fab fa-instagram fa-2x"/>
+                <i className="fab fa-instagram fa-2x" />
                 <input
                   type="text"
                   placeholder="Instagram URL"
@@ -254,10 +252,10 @@ const EditProfile = ({
               </div>
             </Fragment>
           )}
-
           <input type="submit" className="btn btn-primary my-1" />
+
           <Link className="btn btn-light my-1" to="/dashboard">
-            Go Back
+            <i className="bi bi-backspace-fill"></i> Go Back
           </Link>
         </form>
       </section>

@@ -6,6 +6,7 @@ const auth = require("../../middleware/auth");
 const Post = require("../../models/Post");
 const User = require("../../models/User");
 const Profile = require("../../models/Profile");
+const checkObjectId = require("../../middleware/checkObjectId");
 
 // @route         POST api/posts
 // @description   Create a post
@@ -58,7 +59,7 @@ router.get("/", auth, async (req, res) => {
 // @route         GET api/posts/:id
 // @description   Get posts by ID
 // @access        Private
-router.get("/:id", auth, async (req, res) => {
+router.get("/:id", auth, checkObjectId("id"), async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 

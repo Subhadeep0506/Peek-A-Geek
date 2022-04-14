@@ -12,6 +12,9 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
         <Link to="/profiles">Developers</Link>
       </li>
       <li>
+        <Link to="/posts">Posts</Link>
+      </li>
+      <li>
         <Link to="/dashboard">
           <i className="bi bi-people"></i>{" "}
           <span className="hide-sm">Dashboard</span>

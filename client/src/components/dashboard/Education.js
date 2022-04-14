@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 import formatDate from "../../utils/formatDate";
 import { deleteEducation } from "../../actions/profile";
@@ -15,10 +17,25 @@ const Education = ({ education, deleteEducation }) => {
       </td>
       <td>
         <button
-          onClick={() => deleteEducation(edu._id)}
+          onClick={() =>
+            confirmAlert({
+              title: "Delete Comment?",
+              message: "Are you sure you want to delete this comment?",
+              buttons: [
+                {
+                  label: "Proceed",
+                  onClick: () => deleteEducation(edu._id),
+                },
+                {
+                  label: "Cancel",
+                },
+              ],
+              closeOnClickOutside: true,
+            })
+          }
           className="btn btn-danger"
         >
-          <i className="bi bi-trash-fill"></i> Delete
+          <i className="bi bi-trash-fill"></i>
         </button>
       </td>
     </tr>

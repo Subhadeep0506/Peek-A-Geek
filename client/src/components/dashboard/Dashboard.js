@@ -2,6 +2,8 @@ import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 import DashboardActions from "./DashboardActions";
 import Experience from "./Experience";
@@ -39,10 +41,25 @@ const Dashboard = ({
               <Education education={profile.education} />
               <div className="my-2">
                 <button
-                  onClick={() => deleteAccount()}
+                  onClick={() =>
+                    confirmAlert({
+                      title: "Delete Comment?",
+                      message: "Are you sure you want to delete this comment?",
+                      buttons: [
+                        {
+                          label: "Proceed",
+                          onClick: () => deleteAccount(),
+                        },
+                        {
+                          label: "Cancel",
+                        },
+                      ],
+                      closeOnClickOutside: true,
+                    })
+                  }
                   className="btn btn-danger"
                 >
-                  <i class="bi bi-person-dash-fill"></i> Delete Account
+                  <i className="bi bi-person-dash-fill"></i> Delete Account
                 </button>
               </div>
             </Fragment>

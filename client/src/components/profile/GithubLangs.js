@@ -14,8 +14,6 @@ const GithubLangs = ({ repo }) => {
         setLanguage(Object.keys(jsonData));
       });
   }, [repo.languages_url]);
-
-  console.log(language);
   return (
     <div>
       {language.slice(0, 6).map((lang, key) => (

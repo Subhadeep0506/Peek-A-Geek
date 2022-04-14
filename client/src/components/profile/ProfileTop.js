@@ -21,7 +21,7 @@ const ProfileTop = ({
       <p>
         {location && (
           <span>
-            <i class="bi bi-geo-alt-fill"></i> {location}
+            <i className="bi bi-geo-alt-fill"></i> {location}
           </span>
         )}
       </p>
